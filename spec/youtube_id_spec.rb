@@ -56,6 +56,12 @@ describe YoutubeID do
         let(:url) { "#{protocol}youtu.be/Hu0i--4tz0N" }
         it { should == "Hu0i--4tz0N" }
       end
+
+
+      context "short url format with extra query string parameters", "//youtu.be/UaudCwZsOA8?si=fv3Q7-6_bBunvXIM&t=113" do
+        let(:url) { "#{protocol}youtu.be/UaudCwZsOA8?si=fv3Q7-6_bBunvXIM&t=113" }
+        it { should == "UaudCwZsOA8" }
+      end
     end
   end
 end
